@@ -1,0 +1,42 @@
+# Virtual environment
+venv/
+.venv/
+
+# Database files
+*.db
+
+# Environment variables
+.env
+
+# Temporary and untracked files
+*.swp
+*.tmp
+
+# Ignore IDE settings
+.idea/
+.vscode/
+
+# Python bytecode and cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Log files
+logger/bot.log
+
+# Docker archive
+*.tar
+
+# Log-file
+*.log
+*.log.1
+*.log.2
+*.log.3
+
+# Ignore system files
+.DS_Store
+bim.py
+
+# DB Backup directory
+src/DB_LISA/
+

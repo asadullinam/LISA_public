@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  bot:
+    build: .
+    command: python3 src/main.py
+    volumes:
+      - ./database:/app/database
+    env_file:
+      - .env
+    restart: always
+  server:
+    build: .
+    command: uvicorn servers.redirect_server:redirect_server --host 0.0.0.0 --port 8000
+    env_file:
+      - .env
+    volumes:
+      - ./database:/app/database
+    ports:
+      - "8000:8000"
+    restart: always
